@@ -1,3 +1,5 @@
+x(server-start)
+
 (require 'package)
 (require 'cl-lib)
 
@@ -21,4 +23,8 @@
 
 (add-hook `prog-mode-hook #'rainbow-delimiters-mode)
 
+(global-set-key (kbd "C-x g") 'magit-status)
+(global-set-key (kbd "C-x M-g") 'magit-dispatch-popup)
+
 (mapc 'load (directory-files "~/.emacs.d/lib" t "^[^#].*el$"))
+
