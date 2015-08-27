@@ -1,4 +1,4 @@
-x(server-start)
+(server-start)
 
 (require 'package)
 (require 'cl-lib)
