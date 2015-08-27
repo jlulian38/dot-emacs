@@ -21,10 +21,17 @@
 
 (load-theme `zenburn t)
 
-(add-hook `prog-mode-hook #'rainbow-delimiters-mode)
+;; Global programming mode configuration
+(defun my-prog-hook ()
+  (rainbow-delimiters-mode t)
+  (idle-highlight-mode t))
 
+(add-hook `prog-mode-hook 'my-prog-hook)
+
+;; Magit setup
 (global-set-key (kbd "C-x g") 'magit-status)
 (global-set-key (kbd "C-x M-g") 'magit-dispatch-popup)
 
+;; Load all from .emacs.d/lib/*.el
 (mapc 'load (directory-files "~/.emacs.d/lib" t "^[^#].*el$"))
 
