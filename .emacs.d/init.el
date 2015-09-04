@@ -3,8 +3,8 @@
 (require 'package)
 (require 'cl-lib)
 
-;; Require packages
-(setq my-pkgs '(cider better-defaults idle-highlight-mode
+;; Install these packages
+(setq my-pkgs '(cider better-defaults idle-highlight-mode auctex
 		      ido-ubiquitous magit smex zenburn-theme rainbow-delimiters smartparens))
 
 (add-to-list 'package-archives '("marmalade" . "http://marmalade-repo.org/packages/"))
@@ -35,3 +35,4 @@
 ;; Load all from .emacs.d/lib/*.el
 (mapc 'load (directory-files "~/.emacs.d/lib" t "^[^#].*el$"))
 
+(require 'tex-site)
