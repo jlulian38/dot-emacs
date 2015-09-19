@@ -4,7 +4,7 @@
 (require 'cl-lib)
 
 ;; Install these packages
-(setq my-pkgs '(cider better-defaults idle-highlight-mode auctex
+(setq my-pkgs '(cider better-defaults idle-highlight-mode auctex python-mode
 		      ido-ubiquitous magit smex zenburn-theme rainbow-delimiters smartparens))
 
 (add-to-list 'package-archives '("marmalade" . "http://marmalade-repo.org/packages/"))
