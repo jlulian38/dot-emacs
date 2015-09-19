@@ -32,6 +32,9 @@
 (global-set-key (kbd "C-x g") 'magit-status)
 (global-set-key (kbd "C-x M-g") 'magit-dispatch-popup)
 
+;; VisualLineMode
+(global-visual-line-mode 1)
+(setq visual-line-fringe-indicators '(left-curly-arrow right-curly-arrow))
 ;; Load all from .emacs.d/lib/*.el
 (mapc 'load (directory-files "~/.emacs.d/lib" t "^[^#].*el$"))
 
