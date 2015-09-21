@@ -4,7 +4,7 @@
 (require 'cl-lib)
 
 ;; Install these packages
-(setq my-pkgs '(cider better-defaults idle-highlight-mode auctex python-mode
+(setq my-pkgs '(cider better-defaults idle-highlight-mode auctex python-mode nose pep8 pylint
 		      ido-ubiquitous magit smex zenburn-theme rainbow-delimiters smartparens))
 
 (add-to-list 'package-archives '("marmalade" . "http://marmalade-repo.org/packages/"))
@@ -27,6 +27,14 @@
   (idle-highlight-mode t))
 
 (add-hook `prog-mode-hook 'my-prog-hook)
+
+;; Python mode
+(require 'nose)
+(require 'pep8)
+(require 'pylint)
+
+(add-hook `before-save-hook `delete-trailing-whitespace)
+(add-hook `python-mode-hook (lambda () (nose-mode t)))
 
 ;; Magit setup
 (global-set-key (kbd "C-x g") 'magit-status)
