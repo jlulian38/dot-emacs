@@ -34,7 +34,7 @@
 (require 'pylint)
 
 (add-hook `before-save-hook `delete-trailing-whitespace)
-(add-hook `python-mode-hook (lambda () (nose-mode t)))
+
 
 ;; Magit setup
 (global-set-key (kbd "C-x g") 'magit-status)
