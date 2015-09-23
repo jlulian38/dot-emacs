@@ -4,8 +4,10 @@
 (require 'cl-lib)
 
 ;; Install these packages
-(setq my-pkgs '(cider better-defaults idle-highlight-mode auctex python-mode nose pep8 pylint
-		      ido-ubiquitous magit smex zenburn-theme rainbow-delimiters smartparens))
+(setq my-pkgs '(cider better-defaults idle-highlight-mode auctex
+		      python-mode nose pep8 pylint ido-ubiquitous
+		      magit smex zenburn-theme rainbow-delimiters
+		      smartparens exec-path-from-shell))
 
 (add-to-list 'package-archives '("marmalade" . "http://marmalade-repo.org/packages/"))
 (package-initialize)
@@ -18,7 +20,9 @@
       (package-install pkg)))
 
 ;; Configuration
+(exec-path-from-shell-initialize)
 
+;; Theme
 (load-theme `zenburn t)
 
 ;; Global programming mode configuration
@@ -43,6 +47,7 @@
 ;; VisualLineMode
 (global-visual-line-mode 1)
 (setq visual-line-fringe-indicators '(left-curly-arrow right-curly-arrow))
+
 ;; Load all from .emacs.d/lib/*.el
 (mapc 'load (directory-files "~/.emacs.d/lib" t "^[^#].*el$"))
 
