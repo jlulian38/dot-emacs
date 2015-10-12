@@ -104,3 +104,6 @@
                 (and (looking-back (sp--get-closing-regexp))
                      (not (eq (char-syntax (preceding-char)) ?'))))
         (insert " ")))))
+
+
+(add-hook 'prog-mode-hook #'turn-on-smartparens-strict-mode)

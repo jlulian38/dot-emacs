@@ -7,7 +7,7 @@
 (setq my-pkgs '(cider better-defaults idle-highlight-mode auctex
 		      python-mode nose pep8 pylint ido-ubiquitous
 		      magit smex zenburn-theme rainbow-delimiters
-		      smartparens exec-path-from-shell))
+		      smartparens exec-path-from-shell company))
 
 (add-to-list 'package-archives '("marmalade" . "http://marmalade-repo.org/packages/"))
 (package-initialize)
@@ -52,3 +52,4 @@
 (mapc 'load (directory-files "~/.emacs.d/lib" t "^[^#].*el$"))
 
 (require 'tex-site)
+(put 'erase-buffer 'disabled nil)
