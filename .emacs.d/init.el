@@ -9,7 +9,8 @@
 		      magit smex zenburn-theme rainbow-delimiters
 		      smartparens exec-path-from-shell company))
 
-(add-to-list 'package-archives '("marmalade" . "http://marmalade-repo.org/packages/"))
+(add-to-list 'package-archives
+             '("melpa" . "https://melpa.org/packages/"))
 (package-initialize)
 
 (setq pkgs-to-install (cl-remove-if 'package-installed-p my-pkgs))
