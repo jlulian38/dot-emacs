@@ -2,7 +2,6 @@
 (require 'company)
 
 (add-hook 'cider-mode-hook #'eldoc-mode)
-(setq cider-auto-mode nil)
 (setq nrepl-log-messages nil)
 (setq nrepl-hide-special-buffers nil)
 
