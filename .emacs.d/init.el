@@ -7,7 +7,8 @@
 (setq my-pkgs '(cider better-defaults idle-highlight-mode auctex
 		      python-mode nose pep8 pylint ido-ubiquitous
 		      magit smex zenburn-theme rainbow-delimiters
-		      smartparens exec-path-from-shell company))
+		      smartparens exec-path-from-shell company
+		      scala-mode2 haskell-mode xscheme))
 
 (add-to-list 'package-archives
              '("melpa" . "https://melpa.org/packages/"))
