@@ -50,6 +50,12 @@
 (global-visual-line-mode 1)
 (setq visual-line-fringe-indicators '(left-curly-arrow right-curly-arrow))
 
+(defun other-window-backward ()
+  "Goto previous window"
+  (interactive)
+  (other-window -1))
+(global-set-key (kbd "\C-x p") 'other-window-backward)
+
 ;; Load all from .emacs.d/lib/*.el
 (mapc 'load (directory-files "~/.emacs.d/lib" t "^[^#].*el$"))
 
